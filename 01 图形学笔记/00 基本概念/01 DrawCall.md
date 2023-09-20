@@ -1,0 +1,1 @@
+合批的目的是为了减少 drawcall 的次数，以及切换渲染状态的次数。Drawcall 是 cpu 性能开销的大头，因为 drawcall 会使得 cpu 从用户态陷入内核态。因此 cpu 会将 gpu 命令存放在 commandbuffer 中，在合适的时候一起发送给 gpu。
